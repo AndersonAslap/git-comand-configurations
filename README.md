@@ -95,8 +95,10 @@ $ git config --global --edit
 	s = !git status -s 
 	c = !git add --all && git commit -m
 	l = !git log --pretty=format:'%C(blue)%h%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+    p = !git push
 ```
 
 - $ git log => $ git l
 - $ git status => $ git s
 - $ git add -all e git commit -m => $ git c "message"
+- $ git push => $ git p
