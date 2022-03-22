@@ -67,11 +67,36 @@ $ git merge
 
 > Com o comando abaixo consegue-se editar as configurações.
 ```bash
+$ git config --global --edit 
+```
+
+> Com o comando abaixo consegue-se editar as configurações em um editor de texto. 
+```bash
 $ git config --global core.editor <nome_editor> 
+$ git config --global --edit 
 ```
 
 Assim como : 
 
 ```bash
 $ git config --global core.editor code
+$ git config --global --edit 
 ```
+
+# Criando atalhos 
+
+> No aquivo .gitconfig adicionei 3 atalhos para o seguintes comandos.
+- git log
+- git status
+- git add e git commit 
+
+```gitconfig
+[alias]
+	s = !git status -s 
+	c = !git add --all && git commit -m
+	l = !git log --pretty=format:'%C(blue)%h%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+```
+
+- $ git log => $ git l
+- $ git status => $ git s
+- $ git add -all e git commit -m => $ git c "message"
